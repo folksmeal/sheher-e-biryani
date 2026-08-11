@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { StructuredData } from "@/components/StructuredData";
 import { Analytics } from "@vercel/analytics/react";
@@ -11,6 +11,12 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -114,7 +120,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${playfair.variable} antialiased bg-background text-foreground`}
+        className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-background text-foreground`}
       >
         {children}
         <Analytics />

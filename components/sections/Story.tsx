@@ -41,8 +41,8 @@ export function Story() {
             className="relative aspect-square rounded-4xl overflow-hidden border-l-6 border-primary"
           >
             <Image
-              src="/matka-biryani-story.png"
-              alt="Authentic matka biryani in a traditional clay pot"
+              src="/Matka/Chicken.jpg"
+              alt="Authentic Chicken Matka Biryani sealed in a traditional clay pot"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

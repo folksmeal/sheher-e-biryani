@@ -99,31 +99,62 @@ export function Menu() {
                 {/* Details */}
                 <div className="flex-1 flex flex-col justify-between py-1">
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      {/* Veg / Non-Veg indicator */}
-                      <span
-                        className={`w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 ${
-                          menuItem.isVeg
-                            ? "border-green-600"
-                            : "border-red-600"
-                        }`}
-                      >
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        {/* Veg / Egg / Non-Veg indicator */}
                         <span
-                          className={`w-2 h-2 rounded-full ${
-                            menuItem.isVeg ? "bg-green-600" : "bg-red-600"
+                          className={`w-4 h-4 rounded border-2 flex items-center justify-center shrink-0 ${
+                            menuItem.isVeg
+                              ? "border-green-600"
+                              : menuItem.isEgg
+                              ? "border-amber-500"
+                              : "border-red-600"
                           }`}
-                        />
-                      </span>
-                      <h3 className="text-base font-semibold text-foreground leading-snug">
-                        {menuItem.name}
-                      </h3>
+                          title={menuItem.isVeg ? "Vegetarian" : menuItem.isEgg ? "Contains Egg" : "Non-Vegetarian"}
+                        >
+                          <span
+                            className={`w-2 h-2 rounded-full ${
+                              menuItem.isVeg
+                                ? "bg-green-600"
+                                : menuItem.isEgg
+                                ? "bg-amber-500"
+                                : "bg-red-600"
+                            }`}
+                          />
+                        </span>
+                        <h3 className="text-base font-sans font-semibold text-foreground leading-snug">
+                          {menuItem.name}
+                        </h3>
+                        {menuItem.variant && (
+                          <span className="text-[10px] font-sans px-1.5 py-0.5 rounded bg-primary/10 text-primary font-medium">
+                            {menuItem.variant}
+                          </span>
+                        )}
+                      </div>
+                      {menuItem.serves && (
+                        <span className="text-[11px] font-sans font-medium px-2 py-0.5 rounded-full bg-surface-hover text-muted-foreground whitespace-nowrap">
+                          {menuItem.serves}
+                        </span>
+                      )}
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                    <p className="text-sm font-sans text-muted-foreground leading-relaxed line-clamp-2">
                       {menuItem.description}
                     </p>
+                    {menuItem.portion && (
+                      <div className="flex flex-wrap gap-1.5 mt-2">
+                        {menuItem.portion.split("+").map((part, pIdx) => (
+                          <span
+                            key={pIdx}
+                            className="inline-flex items-center text-[11px] font-sans font-medium px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 whitespace-nowrap"
+                          >
+                            {part.trim()}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                  <div className="mt-3">
-                    <span className="text-lg font-heading font-bold text-primary">
+                  <div className="mt-3 flex items-center justify-between">
+                    <span className="text-lg font-sans font-bold text-primary tracking-tight">
                       ₹{menuItem.price}
                     </span>
                   </div>

@@ -14,16 +14,16 @@ export function OrderCTA() {
 
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
-      {/* Background */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/matka-biryani-hero.png"
-          alt="Authentic matka biryani"
+          src="/Matka/Hyderabadi.jpg"
+          alt="Authentic Matka Biryani"
           fill
-          className="object-cover"
+          className="object-cover scale-110 blur-xs"
           sizes="100vw"
         />
-        <div className="absolute inset-0 glass-premium backdrop-blur-[3px] backdrop-brightness-80" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/45 to-black/25" />
       </div>
 
       {/* Content */}
@@ -35,28 +35,28 @@ export function OrderCTA() {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mx-auto transform-gpu"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight leading-tight mb-6 drop-shadow-2xl">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight leading-tight mb-6 drop-shadow-lg">
             Ready to Experience
             <br />
-            <span className="text-accent text-shadow-xs text-shadow-black">
+            <span className="text-accent font-serif italic">
               Sheher-e-Biryani?
             </span>
           </h2>
-          <p className="text-white/90 text-lg mb-10 max-w-lg mx-auto font-medium drop-shadow-lg">
+          <p className="text-white/90 text-lg mb-10 max-w-lg mx-auto font-medium drop-shadow-md">
             Order directly through Zomato for quick delivery, or reach out to us
             on WhatsApp for bulk orders and catering.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href={ZOMATO_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="accent">
+              <Button variant="accent" className="shadow-xl">
                 Order on Zomato
                 <MdArrowForward className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="glass">
-                <FaWhatsapp className="w-5 h-5" />
+              <Button variant="glass" className="border-white/30 text-white hover:bg-white/20">
+                <FaWhatsapp className="w-5 h-5 mr-2" />
                 WhatsApp Us
               </Button>
             </Link>
@@ -66,3 +66,5 @@ export function OrderCTA() {
     </section>
   );
 }
+
+

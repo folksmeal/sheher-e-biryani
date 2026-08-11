@@ -44,13 +44,13 @@ export function Gallery() {
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 md:grid-rows-2 h-auto md:h-125"
         >
-          {galleryImages.slice(0, 5).map((image, i) => (
+          {galleryImages.map((image, i) => (
             <motion.div
               key={i}
               variants={item}
               className={cn(
                 "group relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/10",
-                i === 0 ? "col-span-2 row-span-2 md:col-span-2 md:row-span-2 min-h-[280px] md:min-h-0" : "col-span-1 row-span-1 aspect-square md:aspect-auto"
+                i === 0 ? "col-span-2 row-span-2 md:col-span-2 md:row-span-2 min-h-70 md:min-h-0" : "col-span-1 row-span-1 aspect-square md:aspect-auto"
               )}
             >
               <div className="relative w-full h-full">

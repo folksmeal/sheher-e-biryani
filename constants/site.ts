@@ -6,7 +6,8 @@ export const SITE_DESCRIPTION = process.env.NEXT_PUBLIC_SITE_DESCRIPTION!;
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL!;
 
 /** Zomato ordering link */
-export const ZOMATO_URL = process.env.NEXT_PUBLIC_ZOMATO_URL!;
+export const ZOMATO_URL =
+  process.env.NEXT_PUBLIC_ZOMATO_URL || "https://zomato.onelink.me/xqzv/2rdnw2xs";
 
 /** Google Business Review Link */
 export const GOOGLE_BUSINESS_URL = process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_URL || '#';

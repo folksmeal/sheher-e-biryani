@@ -6,25 +6,30 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
   {
-    src: "/gallery-1.png",
-    alt: "Overhead shot of rustic matka biryani in a traditional clay pot",
+    src: "/Matka/Hyderabadi.jpg",
+    alt: "Authentic Hyderabadi Matka Dum Biryani slow cooked in traditional clay pot",
     span: "tall",
   },
   {
-    src: "/gallery-2.png",
-    alt: "Macro shot of steaming matka biryani with tender mutton",
+    src: "/Matka/Chicken.jpg",
+    alt: "Classic Chicken Matka Biryani sealed with whole wheat dough",
   },
   {
-    src: "/gallery-3.png",
-    alt: "Opening the dough-sealed lid of a traditional dum pukht matka biryani",
+    src: "/Matka/Kolkata.jpg",
+    alt: "Authentic Kolkata style Matka Biryani with signature potato and boiled egg",
   },
   {
-    src: "/gallery-4.png",
-    alt: "Premium 3D render style shot of authentic matka biryani",
+    src: "/Bowl/Chicken 65.png",
+    alt: "Crispy South Indian Chicken 65 Dum Biryani",
     span: "wide",
   },
   {
-    src: "/gallery-5.png",
-    alt: "Signature Sheher-e-Biryani with saffron-infused rice and traditional garnishes",
+    src: "/Butter Chicken.jpg",
+    alt: "Rich and creamy Mughlai Butter Chicken Makhani",
+  },
+  {
+    src: "/Matka/Lucknowi.jpg",
+    alt: "Aromatic Awadhi Lucknowi Dum Biryani",
   },
 ];
+
